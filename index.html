@@ -1,14 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What's Your Cocktail</title>
-    <link rel="stylesheet" href="./styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's Your Cocktail?</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+      defer
+    ></script>
     <script src="./script.js" defer></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <a class="header__link" href="./index.html"
+          ><h2 class="header__title">Cocktails</h2></a
+        >
+        <form class="header__form">
+          <button class="header__button" type="reset">Random Cocktail</button>
+        </form>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__container">
+          <div class="hero__overlay"></div>
+          <h1 class="hero__title">What's Your Cocktail?</h1>
+        </div>
+      </section>
+      <section>
+        <!-- <section class="search"></section> -->
+      </section>
+      <section class="cocktail">
+        <div class="cocktail__container">
+          <h2 class="cocktail__heading">What's Your Cocktail...</h2>
+          <h2 class="cocktail__heading cocktail__heading--hiddenDefault">Great Choice...</h2>
+          <div class="cocktail__information">
+            <img
+              class="cocktail__image"
+              src="assets/imgs/icons8-cocktail-100.png"
+              alt="Cartoon Cocktail Image"
+            />
+            <!-- <div class="cocktail__drink">
+              <h3 class="cocktail__name">Name of Cocktail</h3>
+              <div class="cocktail__contents">
+                <div>
+                  <p class="cocktail__subheading">Ingredients of Cocktail</p>
+                  <ul>
+                    <li class="cocktail__ingredients">Ingredients of Cocktail</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="cocktail__subheading">Measurement of Cocktail</p>
+                  <ul>
+                    <li class="cocktail__measurement">Measurement of Cocktail</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="cocktail__subheading">Instructions of Cocktail</p>
+              <p class="cocktail__instructions">Instructions of Cocktail</p>
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__info">
+          <h2 class="footer__text">Sarah Naunton</h2>
+          <div>
+            <a
+              class="footer__link"
+              href="https://www.linkedin.com/in/sarah-naunton"
+              ><i class="fa-brands fa-linkedin fa-2xl"></i
+            ></a>
+            <a class="footer__link" href="https://github.com/sarahnaunton"
+              ><i class="fa-brands fa-square-github fa-2xl"></i
+            ></a>
+          </div>
+        </div>
+        <h2 class="footer__text">The CocktailDB</h2>
+      </div>
+    </footer>
+  </body>
 </html>

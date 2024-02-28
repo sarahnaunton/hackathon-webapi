@@ -1,0 +1,137 @@
+@use "./typography" as *;
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.header {
+    background-color: $color-background-secondary;
+    @include flex(row, center, center);
+
+    &__container {
+        width: 100%;
+        max-width: $max-width;
+        @include flex(row, space-between, center);
+    }
+
+    &__title {
+        @include subheading($color-text-primary)
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__button {
+        @include button-secondary;
+    }
+}
+
+.hero {
+    @include flex(row, center, center);
+    background-image: url("../assets/imgs/hero-1.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 55vh;
+    position: relative;
+
+    &__overlay {
+        background-color: $color-background-primary;
+        opacity: 0.6;
+        height: 55vh;
+        width: 100%;
+        position: absolute;
+    }
+
+    &__container {
+        width: 100%;
+        max-width: $max-width;
+        @include flex(row, center, center);
+    }
+
+    &__title {
+        @include heading($color-text-quaternary);
+        z-index: 10;
+    }
+}
+
+.footer {
+    background-color: $color-background-secondary;
+    @include flex(row, center, center);
+
+    &__container {
+        width: 100%;
+        max-width: $max-width;
+        @include flex(row, space-between, center);
+    }
+
+    &__info {
+        @include flex(row, space-between, center);
+        width: 30%;
+    }
+
+    &__text {
+        @include subheading($color-text-primary)
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-text-primary;
+    }
+}
+
+.cocktail {
+    background-color: $color-background-tertiary;
+    @include flex(row, center, center);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    &__container {
+        width: 75%;
+        max-width: $max-width;
+        height: 30rem;
+    }
+
+    &__heading {
+        @include subheading($color-text-primary);
+        font-size: 2rem;
+
+        &--hiddenCocktails {
+            display: none;
+        }
+
+        &--hiddenDefault {
+            display: none;
+        }
+    }
+
+    &__information {
+        @include flex(row, center, start);
+        gap: 2rem;
+    }
+
+
+    &__name {
+        @include subheading($color-text-primary)
+    }
+
+    &__contents {
+        @include flex(row, start, start);
+        gap: 10rem;
+    }
+
+    &__subheading {
+        @include body-title ($color-text-tertiary)
+    }
+
+    &__ingredients {
+        @include body-text($color-text-primary)
+    }
+
+    &__measurement {
+        @extend .cocktail__ingredients
+    }
+
+    &__instructions {
+        @extend .cocktail__ingredients
+    }
+
+}

@@ -1,1 +1,223 @@
-/*# sourceMappingURL=styles.css.map */
+@font-face {
+  font-family: "Old Standard TT";
+  src: url("./assets/fonts/OldStandardTT-Regular.ttf") format("TrueType");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Old Standard TT";
+  src: url("./assets/fonts/OldStandardTT-Italic.ttf") format("TrueType");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Old Standard TT";
+  src: url("./assets/fonts/OldStandardTT-Bold.ttf") format("TrueType");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("./assets/fonts/Merriweather-Regular.ttf") format("TrueType");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("./assets/fonts/Merriweather-Italic.ttf") format("TrueType");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("./assets/fonts/Merriweather-Bold.ttf") format("TrueType");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather";
+  src: url("./assets/fonts/Merriweather-BoldItalic.ttf") format("TrueType");
+  font-weight: 700;
+  font-style: italic;
+}
+.header {
+  background-color: #f8ca00;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header__container {
+  width: 100%;
+  max-width: 1020px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__title {
+  font-size: 1.5rem;
+  font-family: "Merriweather";
+  color: #333333;
+  font-weight: 700;
+  font-style: italic;
+}
+.header__link {
+  text-decoration: none;
+}
+.header__button {
+  background-color: #111111;
+  color: #ffffff;
+  font-family: "Old Standard TT";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+  height: 3rem;
+  width: 10rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/imgs/hero-1.jpeg");
+  background-position: center;
+  background-size: cover;
+  height: 55vh;
+  position: relative;
+}
+.hero__overlay {
+  background-color: #333333;
+  opacity: 0.6;
+  height: 55vh;
+  width: 100%;
+  position: absolute;
+}
+.hero__container {
+  width: 100%;
+  max-width: 1020px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.hero__title {
+  font-size: 3rem;
+  font-family: "Merriweather";
+  color: #ffffff;
+  font-weight: 700;
+  font-style: normal;
+  z-index: 10;
+}
+
+.footer {
+  background-color: #f8ca00;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.footer__container {
+  width: 100%;
+  max-width: 1020px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+.footer__text {
+  font-size: 1.5rem;
+  font-family: "Merriweather";
+  color: #333333;
+  font-weight: 700;
+  font-style: italic;
+}
+.footer__link {
+  text-decoration: none;
+  color: #333333;
+}
+
+.cocktail {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.cocktail__container {
+  width: 75%;
+  max-width: 1020px;
+  height: 30rem;
+}
+.cocktail__heading {
+  font-size: 1.5rem;
+  font-family: "Merriweather";
+  color: #333333;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2rem;
+}
+.cocktail__heading--hiddenCocktails {
+  display: none;
+}
+.cocktail__heading--hiddenDefault {
+  display: none;
+}
+.cocktail__information {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+}
+.cocktail__name {
+  font-size: 1.5rem;
+  font-family: "Merriweather";
+  color: #333333;
+  font-weight: 700;
+  font-style: italic;
+}
+.cocktail__contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  gap: 10rem;
+}
+.cocktail__subheading {
+  font-size: 1rem;
+  font-family: "Old Standard TT";
+  color: #f8ca00;
+  font-weight: 700;
+  font-style: normal;
+}
+.cocktail__ingredients, .cocktail__instructions, .cocktail__measurement {
+  font-size: 1rem;
+  font-family: "Old Standard TT";
+  color: #333333;
+  font-weight: 400;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}/*# sourceMappingURL=styles.css.map */
