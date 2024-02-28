@@ -36,39 +36,56 @@
           <h1 class="hero__title">What's Your Cocktail?</h1>
         </div>
       </section>
-      <section>
-        <!-- <section class="search"></section> -->
+      <section class="search">
+        <div class="search__container">
+            <img
+            class="search__image"
+            src="assets/imgs/icons8-cocktail-100.png"
+            alt="Cartoon Cocktail Image"
+          />
+          <label for="cocktail" class="cocktail__heading">Choose your Cocktail:</label>
+          <select name="cocktail" id="cocktail" class="search__bar">
+            <option value="">--Please choose an option--</option>
+            <option value="Espresso Martini">Espresso Martini</option>
+            <option value="Margarita">Margarita</option>
+            <option value="Tom Collins">Tom Collins</option>
+            <option value="Negroni">Negroni</option>
+            <option value="Daiquiri">Daiquiri</option>
+            <option value="Dark and Stormy">Dark and Stormy </option>
+            <option value="Mojito">Mojito </option>
+            <option value="Manhattan">Manhattan </option>
+            <option value="Aperol Spritz">Aperol Spritz </option>
+          </select>
+        </div>
       </section>
       <section class="cocktail">
         <div class="cocktail__container">
-          <h2 class="cocktail__heading">What's Your Cocktail...</h2>
-          <h2 class="cocktail__heading cocktail__heading--hiddenDefault">Great Choice...</h2>
+            <h2 class="cocktail__heading cocktail__heading--hidden">Great Choice...</h2>
           <div class="cocktail__information">
-            <img
-              class="cocktail__image"
-              src="assets/imgs/icons8-cocktail-100.png"
-              alt="Cartoon Cocktail Image"
-            />
             <!-- <div class="cocktail__drink">
               <h3 class="cocktail__name">Name of Cocktail</h3>
               <div class="cocktail__contents">
                 <div>
                   <p class="cocktail__subheading">Ingredients of Cocktail</p>
                   <ul>
-                    <li class="cocktail__ingredients">Ingredients of Cocktail</li>
+                    <li class="cocktail__ingredients">
+                      Ingredients of Cocktail
+                    </li>
                   </ul>
                 </div>
                 <div>
                   <p class="cocktail__subheading">Measurement of Cocktail</p>
                   <ul>
-                    <li class="cocktail__measurement">Measurement of Cocktail</li>
+                    <li class="cocktail__measurement">
+                      Measurement of Cocktail
+                    </li>
                   </ul>
                 </div>
               </div>
               <p class="cocktail__subheading">Instructions of Cocktail</p>
               <p class="cocktail__instructions">Instructions of Cocktail</p>
-            </div>
-          </div> -->
+            </div> -->
+          </div>
         </div>
       </section>
     </main>
