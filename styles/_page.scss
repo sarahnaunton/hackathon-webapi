@@ -3,155 +3,184 @@
 @use "./mixins" as *;
 
 .header {
-    background-color: $color-background-secondary;
-    @include flex(row, center, center);
+  background-color: $color-background-secondary;
+  @include flex(row, center, center);
 
-    &__container {
-        width: 100%;
-        max-width: $max-width;
-        @include flex(row, space-between, center);
-    }
+  &__container {
+    width: 100%;
+    max-width: $max-width;
+    @include flex(row, space-between, center);
+  }
 
-    &__title {
-        @include subheading($color-text-primary)
-    }
+  &__title {
+    @include subheading($color-text-primary);
+  }
 
-    &__link {
-        text-decoration: none;
-    }
+  &__link {
+    text-decoration: none;
+  }
 
-    &__button {
-        @include button-secondary;
+  &__form {
+    @include flex(row, start, center);
+    gap: 2rem;
+  }
+
+  &__button {
+    @include button-secondary;
+
+    &:hover {
+      background-color: $color-background-primary;
     }
+  }
 }
 
 .hero {
-    @include flex(row, center, center);
-    background-image: url("../assets/imgs/hero-1.jpeg");
-    background-position: center;
-    background-size: cover;
+  @include flex(row, center, center);
+  background-image: url("../assets/imgs/hero-1.jpeg");
+  background-position: center;
+  background-size: cover;
+  height: 55vh;
+  position: relative;
+
+  &__overlay {
+    background-color: $color-background-primary;
+    opacity: 0.6;
     height: 55vh;
-    position: relative;
+    width: 100%;
+    position: absolute;
+  }
 
-    &__overlay {
-        background-color: $color-background-primary;
-        opacity: 0.6;
-        height: 55vh;
-        width: 100%;
-        position: absolute;
-    }
+  &__container {
+    width: 100%;
+    max-width: $max-width;
+    @include flex(row, center, center);
+  }
 
-    &__container {
-        width: 100%;
-        max-width: $max-width;
-        @include flex(row, center, center);
-    }
+  &__title {
+    @include heading($color-text-quaternary);
+    z-index: 10;
 
-    &__title {
-        @include heading($color-text-quaternary);
-        z-index: 10;
+    &:hover {
+      transform: scale(1.5);
     }
+  }
 }
 
-.footer {
-    background-color: $color-background-secondary;
-    @include flex(row, center, center);
-
-    &__container {
-        width: 100%;
-        max-width: $max-width;
-        @include flex(row, space-between, center);
-    }
-
-    &__info {
-        @include flex(row, space-between, center);
-        width: 30%;
-    }
-
-    &__text {
-        @include subheading($color-text-primary)
-    }
-
-    &__link {
-        text-decoration: none;
-        color: $color-text-primary;
-    }
+@keyframes cocktail-twist {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .search {
-    background-color: $color-background-tertiary;
-    @include flex(row, center, center);
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+  background-color: $color-background-tertiary;
+  @include flex(row, center, center);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 
-    &__container {
-        width: 75%;
-        max-width: $max-width;
-    }
+  &__container {
+    max-width: $max-width;
+    width: 50%;
+    @include flex(column, center, center);
+  }
 
-    &__heading {
-        @include subheading($color-text-primary);
-        font-size: 2rem;
-}
-&__bar {
+  &__image {
+    vertical-align: bottom;
+    margin-right: 2rem;
+    animation: cocktail-twist 3s infinite;
+  }
+
+  &__heading {
+    @include subheading($color-text-primary);
+    font-size: 2rem;
+  }
+  &__bar {
     @include button-primary;
-    margin-left: 2rem;
+    margin: 3rem;
+  }
 }
-}
-
-
 
 .cocktail {
-    background-color: $color-background-tertiary;
-    @include flex(row, center, center);
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+  background-color: $color-background-tertiary;
+  @include flex(row, center, center);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 
-    &__container {
-        width: 75%;
-        max-width: $max-width;
-        height: 35rem;
+  &__container {
+    @include flex(column, center, center);
+    max-width: $max-width;
+    width: 60%;
+  }
+
+  &__heading {
+    @include subheading($color-text-primary);
+    font-size: 2rem;
+
+    &--hidden {
+      display: none;
     }
+  }
 
-    &__heading {
-        @include subheading($color-text-primary);
-        font-size: 2rem;
+  &__information {
+    gap: 3rem;
+  }
 
-        &--hidden {
-            display: none;
-        }
-    }
+  &__drink {
+    @include flex(column, center, center);
+  }
 
-    &__information {
-        @include flex(row, center, start);
-        gap: 2rem;
-    }
+  &__name {
+    @include subheading($color-text-primary);
+    text-align: center;
+  }
 
+  &__contents {
+    @include flex(row, start, start);
+    gap: 10rem;
+  }
 
-    &__name {
-        @include subheading($color-text-primary)
-    }
+  &__subheading {
+    @include body-title($color-text-tertiary);
+  }
 
-    &__contents {
-        @include flex(row, start, start);
-        gap: 10rem;
-    }
+  &__ingredients {
+    @include body-text($color-text-primary);
+  }
 
-    &__subheading {
-        @include body-title ($color-text-tertiary)
-    }
+  &__measurement {
+    @extend .cocktail__ingredients;
+  }
 
-    &__ingredients {
-        @include body-text($color-text-primary)
-    }
-
-    &__measurement {
-        @extend .cocktail__ingredients
-    }
-
-    &__instructions {
-        @extend .cocktail__ingredients
-    }
-
+  &__instructions {
+    @extend .cocktail__ingredients;
+    width: 55%;
+  }
 }
 
+.footer {
+  background-color: $color-background-secondary;
+  @include flex(row, center, center);
+
+  &__container {
+    width: 100%;
+    max-width: $max-width;
+    @include flex(row, space-between, center);
+  }
+
+  &__info {
+    @include flex(row, space-between, center);
+    width: 30%;
+  }
+
+  &__text {
+    @include subheading($color-text-primary);
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-text-primary;
+  }
+}

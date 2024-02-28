@@ -1,80 +1,79 @@
 @use "./typography" as *;
 @use "./variables" as *;
 
-
 @mixin tablet-and-desktop {
-    @media screen and (min-width: $tablet-breakpoint) {
-      @content;
-    }
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
   }
-  
-  @mixin desktop {
-    @media screen and (min-width: $desktop-breakpoint) {
-      @content;
-    }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
   }
-
-  @mixin flex($direction, $justify, $align) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-  }
-
-@mixin heading ($color) {
-    font-size: 3rem;
-    font-family: "Merriweather";
-    color: $color;
-    font-weight: 700;
-    font-style: normal;
 }
 
-@mixin subheading ($color) {
-    font-size: 1.5rem;
-    font-family: "Merriweather";
-    color: $color;
-    font-weight: 700;
-    font-style: italic;
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }
 
-@mixin body-title ($color) {
-    font-size: 1rem;
-    font-family: "Old Standard TT";
-    color: $color;
-    font-weight: 700;
-    font-style: normal;
+@mixin heading($color) {
+  font-size: 3rem;
+  font-family: "Merriweather";
+  color: $color;
+  font-weight: 700;
+  font-style: normal;
 }
 
-@mixin body-text ($color) {
-    font-size: 1rem;
-    font-family: "Old Standard TT";
-    color: $color;
-    font-weight: 400;
-    font-style: normal;
+@mixin subheading($color) {
+  font-size: 1.5rem;
+  font-family: "Merriweather";
+  color: $color;
+  font-weight: 700;
+  font-style: italic;
 }
 
-@mixin button-primary  {
-    background-color: $color-button-primary;
-    color: $color-text-secondary;
-    font-family: "Old Standard TT";
-    font-weight: 600;
-    font-style: normal;
-    font-size: 1rem;
-    height: 4rem;
-    width: 15rem;
-    border: none;
-    border-radius: 5px;
+@mixin body-title($color) {
+  font-size: 1rem;
+  font-family: "Old Standard TT";
+  color: $color;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin body-text($color) {
+  font-size: 1rem;
+  font-family: "Old Standard TT";
+  color: $color;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin button-primary {
+  background-color: $color-button-primary;
+  color: $color-text-secondary;
+  font-family: "Old Standard TT";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+  height: 4rem;
+  width: 15rem;
+  border: none;
+  border-radius: 5px;
 }
 
 @mixin button-secondary {
-    background-color: $color-button-secondary;
-    color: $color-text-quaternary;
-    font-family: "Old Standard TT";
-    font-weight: 600;
-    font-style: normal;
-    font-size: 1rem;
-    height: 3rem;
-    width: 10rem;
-    border: none;
-    border-radius: 5px;
+  background-color: $color-button-secondary;
+  color: $color-text-quaternary;
+  font-family: "Old Standard TT";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+  height: 3rem;
+  width: 10rem;
+  border: none;
+  border-radius: 5px;
 }

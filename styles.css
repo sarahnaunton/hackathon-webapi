@@ -65,6 +65,13 @@
 .header__link {
   text-decoration: none;
 }
+.header__form {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+}
 .header__button {
   background-color: #111111;
   color: #ffffff;
@@ -76,6 +83,9 @@
   width: 10rem;
   border: none;
   border-radius: 5px;
+}
+.header__button:hover {
+  background-color: #333333;
 }
 
 .hero {
@@ -112,6 +122,133 @@
   font-style: normal;
   z-index: 10;
 }
+.hero__title:hover {
+  transform: scale(1.5);
+}
+
+@keyframes cocktail-twist {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.search {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.search__container {
+  max-width: 1020px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search__image {
+  vertical-align: bottom;
+  margin-right: 2rem;
+  animation: cocktail-twist 3s infinite;
+}
+.search__heading {
+  font-size: 1.5rem;
+  font-family: "Merriweather";
+  color: #333333;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2rem;
+}
+.search__bar {
+  background-color: #f8ca00;
+  color: #111111;
+  font-family: "Old Standard TT";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+  height: 4rem;
+  width: 15rem;
+  border: none;
+  border-radius: 5px;
+  margin: 3rem;
+}
+
+.cocktail {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.cocktail__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1020px;
+  width: 60%;
+}
+.cocktail__heading {
+  font-size: 1.5rem;
+  font-family: "Merriweather";
+  color: #333333;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2rem;
+}
+.cocktail__heading--hidden {
+  display: none;
+}
+.cocktail__information {
+  gap: 3rem;
+}
+.cocktail__drink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cocktail__name {
+  font-size: 1.5rem;
+  font-family: "Merriweather";
+  color: #333333;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+}
+.cocktail__contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  gap: 10rem;
+}
+.cocktail__subheading {
+  font-size: 1rem;
+  font-family: "Old Standard TT";
+  color: #f8ca00;
+  font-weight: 700;
+  font-style: normal;
+}
+.cocktail__ingredients,
+.cocktail__instructions,
+.cocktail__measurement {
+  font-size: 1rem;
+  font-family: "Old Standard TT";
+  color: #333333;
+  font-weight: 400;
+  font-style: normal;
+}
+.cocktail__instructions {
+  width: 55%;
+}
 
 .footer {
   background-color: #f8ca00;
@@ -147,101 +284,6 @@
   color: #333333;
 }
 
-.search {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.search__container {
-  width: 75%;
-  max-width: 1020px;
-}
-.search__heading {
-  font-size: 1.5rem;
-  font-family: "Merriweather";
-  color: #333333;
-  font-weight: 700;
-  font-style: italic;
-  font-size: 2rem;
-}
-.search__bar {
-  background-color: #f8ca00;
-  color: #111111;
-  font-family: "Old Standard TT";
-  font-weight: 600;
-  font-style: normal;
-  font-size: 1rem;
-  height: 4rem;
-  width: 15rem;
-  border: none;
-  border-radius: 5px;
-  margin-left: 2rem;
-}
-
-.cocktail {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.cocktail__container {
-  width: 75%;
-  max-width: 1020px;
-  height: 35rem;
-}
-.cocktail__heading {
-  font-size: 1.5rem;
-  font-family: "Merriweather";
-  color: #333333;
-  font-weight: 700;
-  font-style: italic;
-  font-size: 2rem;
-}
-.cocktail__heading--hidden {
-  display: none;
-}
-.cocktail__information {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: start;
-  gap: 2rem;
-}
-.cocktail__name {
-  font-size: 1.5rem;
-  font-family: "Merriweather";
-  color: #333333;
-  font-weight: 700;
-  font-style: italic;
-}
-.cocktail__contents {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: start;
-  gap: 10rem;
-}
-.cocktail__subheading {
-  font-size: 1rem;
-  font-family: "Old Standard TT";
-  color: #f8ca00;
-  font-weight: 700;
-  font-style: normal;
-}
-.cocktail__ingredients, .cocktail__instructions, .cocktail__measurement {
-  font-size: 1rem;
-  font-family: "Old Standard TT";
-  color: #333333;
-  font-weight: 400;
-  font-style: normal;
-}
 *,
 *::before,
 *::after {
@@ -252,4 +294,4 @@ html,
 body {
   margin: 0;
   padding: 0;
-}/*# sourceMappingURL=styles.css.map */
+} /*# sourceMappingURL=styles.css.map */

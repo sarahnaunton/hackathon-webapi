@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What's Your Cocktail?</title>
     <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -25,6 +43,7 @@
           ><h2 class="header__title">Cocktails</h2></a
         >
         <form class="header__form">
+          <p class="header__title">Cant Decide?</p>
           <button class="header__button" type="reset">Random Cocktail</button>
         </form>
       </div>
@@ -38,54 +57,38 @@
       </section>
       <section class="search">
         <div class="search__container">
+          <div>
             <img
-            class="search__image"
-            src="assets/imgs/icons8-cocktail-100.png"
-            alt="Cartoon Cocktail Image"
-          />
-          <label for="cocktail" class="cocktail__heading">Choose your Cocktail:</label>
-          <select name="cocktail" id="cocktail" class="search__bar">
-            <option value="">--Please choose an option--</option>
-            <option value="Espresso Martini">Espresso Martini</option>
-            <option value="Margarita">Margarita</option>
-            <option value="Tom Collins">Tom Collins</option>
-            <option value="Negroni">Negroni</option>
-            <option value="Daiquiri">Daiquiri</option>
-            <option value="Dark and Stormy">Dark and Stormy </option>
-            <option value="Mojito">Mojito </option>
-            <option value="Manhattan">Manhattan </option>
-            <option value="Aperol Spritz">Aperol Spritz </option>
-          </select>
+              class="search__image"
+              src="assets/imgs/icons8-cocktail-100.png"
+              alt="Cartoon Cocktail Image"
+            />
+            <label for="cocktail" class="cocktail__heading"
+              >Choose your Cocktail</label
+            >
+          </div>
+          <div>
+            <select name="cocktail" id="cocktail" class="search__bar">
+              <option value="">--Please choose an option--</option>
+              <option value="Espresso Martini">Espresso Martini</option>
+              <option value="Margarita">Margarita</option>
+              <option value="Tom Collins">Tom Collins</option>
+              <option value="Negroni">Negroni</option>
+              <option value="Daiquiri">Daiquiri</option>
+              <option value="Dark and Stormy">Dark and Stormy</option>
+              <option value="Mojito">Mojito</option>
+              <option value="Manhattan">Manhattan</option>
+              <option value="Aperol Spritz">Aperol Spritz</option>
+            </select>
+          </div>
         </div>
       </section>
       <section class="cocktail">
         <div class="cocktail__container">
-            <h2 class="cocktail__heading cocktail__heading--hidden">Great Choice...</h2>
-          <div class="cocktail__information">
-            <!-- <div class="cocktail__drink">
-              <h3 class="cocktail__name">Name of Cocktail</h3>
-              <div class="cocktail__contents">
-                <div>
-                  <p class="cocktail__subheading">Ingredients of Cocktail</p>
-                  <ul>
-                    <li class="cocktail__ingredients">
-                      Ingredients of Cocktail
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <p class="cocktail__subheading">Measurement of Cocktail</p>
-                  <ul>
-                    <li class="cocktail__measurement">
-                      Measurement of Cocktail
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <p class="cocktail__subheading">Instructions of Cocktail</p>
-              <p class="cocktail__instructions">Instructions of Cocktail</p>
-            </div> -->
-          </div>
+          <h2 class="cocktail__heading cocktail__heading--hidden">
+            Great Choice...
+          </h2>
+          <div class="cocktail__information"></div>
         </div>
       </section>
     </main>
@@ -94,6 +97,9 @@
         <div class="footer__info">
           <h2 class="footer__text">Sarah Naunton</h2>
           <div>
+            <a class="footer__link" href="mailto:sarah@naunton.org"
+              ><i class="fa-solid fa-envelope fa-2xl"></i
+            ></a>
             <a
               class="footer__link"
               href="https://www.linkedin.com/in/sarah-naunton"
@@ -104,7 +110,9 @@
             ></a>
           </div>
         </div>
-        <h2 class="footer__text">The CocktailDB</h2>
+        <a class="footer__link" href="https://www.thecocktaildb.com/"
+          ><h2 class="footer__text">The CocktailDB</h2></a
+        >
       </div>
     </footer>
   </body>
