@@ -1,9 +1,9 @@
 
 # Cocktail Generator
 
-This project was created during my first (6 hour) hackathon during week 5 of the software engineering bootcamp at BrainStation. The goal was to create a website and integrate a web API.
+This project was created during my first (6 hour) hackathon during week 5 of the software engineering bootcamp at BrainStation. The goal was to create a page and integrate a web API.
 
-I developed a website that generates cocktail recipes. As someone who appreciates the flavours and creativity behind cocktails, I wanted to create a platform where users can explore a variety of cocktail recipes in a fun and engaging way. 
+I developed a page that generates cocktail recipes. As someone who appreciates the flavours and creativity behind cocktails, I wanted to create a platform where users can explore a variety of cocktail recipes in a fun and engaging way. 
  
 
 
